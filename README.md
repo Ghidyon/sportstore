@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# sport-store
+This project was bootstrapped with [React](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- An online product catalog where customers can browse by category and page.
+- A shopping cart where users can add and remove products, and
+- A checkout where customers can enter their details and place their orders.
+- An administration area that includes create, read, update, and delete (CRUD) facilities for managing products and orders.
+- Protected, so that only logged-in administrators can make changes.
+
+![](https://img.shields.io/badge/build-in%20progress-orange)
 
 ## Available Scripts
 
