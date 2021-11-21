@@ -18,6 +18,10 @@ export class ProductList extends Component {
                 </h4>
                 <div className="card-text bg-white p-1">
                     {product.description}
+                    <button className="btn btn-success btn-sm float-right"
+                        onClick={ () => this.props.addToCart(product) } >
+                        Add To Cart
+                    </button>
                 </div>
             </div>);
     }
