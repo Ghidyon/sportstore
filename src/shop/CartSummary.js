@@ -25,7 +25,7 @@ export class CartSummary extends Component {
             <small>
                 {this.getSummary()}
                 <Link className={this.getLinkClasses()}
-                    to="shop/cart">
+                    to="/shop/cart">
                     <i className="fa fa-shopping-cart"></i>
                 </Link>
             </small>
