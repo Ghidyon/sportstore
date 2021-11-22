@@ -29,8 +29,8 @@ export const ShopConnector = connect(mapStateToProps, mapDispatchToProps)(
                 
                 <Route path={ "/shop/products/:category/:page" }
                     render={ routeProps => 
-                        <DataGetter {...this.props} {...routeProps}>
-                            <Shop {...this.props} {...routeProps} />
+                        <DataGetter { ...this.props } { ...routeProps }>
+                            <Shop { ...this.props } { ...routeProps } />
                         </DataGetter>    
                     } />
                 
