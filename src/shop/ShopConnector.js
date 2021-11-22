@@ -7,6 +7,7 @@ import { Shop } from "./Shop";
 import { addToCart, updateCartQuantity, removeFromCart, clearCart }
     from "../data/CartActionCreators";
 import { CartDetails } from "./CartDetails";
+import { DataGetter } from "../data/DataGetter";
 
 const mapStateToProps = (dataStore) => ({
     ...dataStore
@@ -15,12 +16,12 @@ const mapStateToProps = (dataStore) => ({
 const mapDispatchToProps = {
     loadData, addToCart, updateCartQuantity, removeFromCart, clearCart
 }
-
+/* 
 const filterProducts = (products = [], category) =>
     (!category || category === "All")
         ? products
         : products.filter(product =>
-            product.category.toLowerCase() === category.toLowerCase());
+            product.category.toLowerCase() === category.toLowerCase()); */
 
 export const ShopConnector = connect(mapStateToProps, mapDispatchToProps)(
     class extends Component {
