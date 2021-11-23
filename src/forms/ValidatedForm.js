@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { ValidationError } from "./ValidationError";
-import { GetMessages } from "./ValidationError";
+import { GetMessages } from "./ValidationMessages";
 
-export class ValidateForm extends Component {
+export class ValidatedForm extends Component {
 
     constructor(props) {
         super(props);
@@ -15,7 +15,7 @@ export class ValidateForm extends Component {
 
     handleSubmit = () => {
         this.setState(state => {
-            const newState = { ...state, validationDrrors: {} };
+            const newState = { ...state, validationErrors: {} };
             
             Object.values(this.formElements).foreach(elem => {
                 if (!elem.checkValidity()) {
@@ -46,15 +46,15 @@ export class ValidateForm extends Component {
         
         return <div className="form-group" key={ modelItem.label }>
             <label>{modelItem.label}</label>
-            <ValidationError errors={this.state.ValidationErrors[name]} />
+            <ValidationError errors={this.state.validationErrors[name]} />
             <input className="form-control" name={name}
-                ref={this.registerRef} { ...this.props.defaultAttrs } { ...modelItem.attrs } />}
+                ref={this.registerRef} { ...this.props.defaultAttrs } { ...modelItem.attrs } />
         </div>
     }
 
     render() {
         return <React.Fragment>
-            {this.props.formModel.map(model => this.renderElement(model))}
+            {this.props.formModel.map(m => this.renderElement(m))}
 
             <div className="text-center">
                 <button className="btn btn-secondary m-1"
