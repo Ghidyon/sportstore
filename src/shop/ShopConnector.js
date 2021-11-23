@@ -16,7 +16,11 @@ const mapStateToProps = (dataStore) => ({
 });
 
 const mapDispatchToProps = {
-    loadData, addToCart, updateCartQuantity, removeFromCart, clearCart,
+    loadData,
+    addToCart,
+    updateCartQuantity,
+    removeFromCart,
+    clearCart,
     placeOrder
 }
 
@@ -43,11 +47,11 @@ export const ShopConnector = connect(mapStateToProps, mapDispatchToProps)(
                 
                 <Route path="/shop/checkout"
                     render={routeProps =>
-                        <Checkout {...this.props} {...this.routeProps} />} />
+                        <Checkout {...this.props} {...routeProps} />} />
                 
                 <Route path="/shop/thanks"
                     render={routeProps =>
-                    <Thanks {...this.props} {...this.routeProps}/> }/>
+                        <Thanks {...this.props} {...routeProps}/> }/>
 
                 
                 <Redirect to="/shop/products/all/1" />

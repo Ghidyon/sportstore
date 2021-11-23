@@ -38,7 +38,8 @@ export class Checkout extends Component {
 
     handleSubmit = (formData) => {
         const order = {
-            ...formData, product: this.props.cart.map(item => ({
+            ...formData,
+            products: this.props.cart.map(item => ({
                 quantity: item.quantity,
                 product_id: item.product.id
             }))
