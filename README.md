@@ -7,7 +7,7 @@ This project was bootstrapped with [React](https://github.com/facebook/create-re
 - An administration area that includes create, read, update, and delete (CRUD) facilities for managing products and orders.
 - Protected, so that only logged-in administrators can make changes.
 
-![](https://img.shields.io/badge/build-in%20progress-orange)
+![](https://img.shields.io/badge/build-progress-orange)
 
 ## Available Scripts
 
